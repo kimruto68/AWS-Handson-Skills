@@ -1,0 +1,45 @@
+Calender
+#options- -bhjJwySM
+$ ncal -jy #full year calender, summing dates
+$ ncal -by #full year calender, normal dates
+
+Creating users
+$ sudo adduser Kimi
+# Enter full name and the password and confirm #add more details asked. 
+
+cheking added users
+$ sudo cat /etc/passwd | cut -d: f1
+>>>the output of cat is passed throu' pipe (|) to the cut
+>>>cut -d ; specify that delimitor is a colon.
+
+details of the result; username, encrypted pasword placeholder, User ID, group ID, Fullname, H. directory & shell.
+
+ADDING GROUPS
+$ sudo groupadd Admin
+To verify the group created
+$ sudo cat /etc/group
+Adding users to group
+$ sudo usermod -a -g Sales Kimi
+-a means append; to add user to additional group without removing them from the current groups.
+-g specify the group to add the user to
+
+Loggin using the new user details
+$ su kimi
+enter the password
+
+Creating File
+$ touch myFile -creates the file
+$ vim myFile -editing the file
+$ cat myFile -viewing the contents of the file.
+$ sudo groupdel Admin -deleting group
+$ sudo userdel kimi -deleting a user
+
+VIM
+:q! -Force quit
+:d -deleting the line
+:u -undoing the most current action
+:w -saving changes
+
+INSTALLING 
+$ sudo apt install vim,vlc, ...
+
